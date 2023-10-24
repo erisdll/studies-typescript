@@ -8,21 +8,19 @@ let myNumbers: number[] = [1, 2, 3];
 let truths: boolean[] = [true, true, false];
 
 // Classes
-class Car {
-
-}
+class Car {}
 let car: Car = new Car();
 
 // Object literal
 let point: { x: number; y: number } = {
-  x: 10,
-  y: 20,
+	x: 10,
+	y: 20,
 };
 
-// Function 
+// Function
 const logNumber: (i: number) => void = (i: number) => {
-  console.log(i);
-}
+	console.log(i);
+};
 
 // When to use  annotations
 // 1) Function thata returns the 'any' type
@@ -36,9 +34,9 @@ console.log(coodinates); // {x: 10, y: 20}
 let words = ['red', 'green', 'blue'];
 let foundWord: boolean;
 for (let i = 0; i < words.length; i++) {
-  if (words[i] === 'green') {
-    foundWord = true;
-  }
+	if (words[i] === 'green') {
+		foundWord = true;
+	}
 }
 
 // 3) Variable whose type cannor ve infered correctly
@@ -46,7 +44,7 @@ let numbers = [-10, -1, 12];
 let numbersAboveZero: boolean | number = false;
 
 for (let i = 0; i < numbers.length; i++) {
-  if (numbers[i] > 0) {
-    numbersAboveZero = numbers[i];
-  }
+	if (numbers[i] > 0) {
+		numbersAboveZero = numbers[i];
+	}
 }

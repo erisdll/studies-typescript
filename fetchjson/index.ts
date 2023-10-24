@@ -23,5 +23,5 @@ const logTodo = (id: number, title: string, completed: boolean) => {
   The todo with ID: ${id}
   Has the title: ${title}
   Is it completed: ${completed}
-  `)
-}
+  `);
+};
