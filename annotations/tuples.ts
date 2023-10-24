@@ -1,7 +1,7 @@
 const drink = {
-	color: 'brown',
-	carbonated: true,
-	sugar: 40,
+  color: 'brown',
+  carbonated: true,
+  sugar: 40,
 };
 
 type Drink = [string, boolean, number];
@@ -13,6 +13,6 @@ const tea: Drink = ['beown', false, 0];
 const carSpecs: [number, number] = [400, 3354];
 
 const carStats = {
-	horsepower: 400,
-	weigth: 3354,
+  horsepower: 400,
+  weigth: 3354,
 };

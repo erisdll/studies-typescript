@@ -30,7 +30,7 @@ const throwError = (message: string): void => {
 
 const todaysWeather = {
   date: new Date(),
-  weather: "sunny",
+  weather: 'sunny',
 };
 
 const logWeather = ({
@@ -40,7 +40,8 @@ const logWeather = ({
   date: Date;
   weather: string;
 }): void => {
-  console.log(date); console.log(weather);
+  console.log(date);
+  console.log(weather);
 };
 
 logWeather(todaysWeather);

@@ -7,7 +7,7 @@ const carsByMake = [['f150'], ['corolla'], ['camaro']];
 const carsByMakeEmpty: string[][] = [];
 
 // Help with inference when extracting valuies
-const car = carMakers[0];
+const car2 = carMakers[0];
 const myCar = carMakers.pop();
 
 // Prevent incompatible values
@@ -15,7 +15,7 @@ const myCar = carMakers.pop();
 
 // Help with 'map'
 carMakers.map((car: string) => {
-	return car.toUpperCase();
+  return car.toUpperCase();
 });
 
 // Flexible types
