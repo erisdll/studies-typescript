@@ -1,23 +1,20 @@
-class Sorter {
-  constructor(public collection: number[] | string) {}
+import { Sorter } from './sorter';
+import { NumbersCollection } from './NumbersCollection';
+import { CharacterCollection } from './CharacterCollection';
+import { LinkedList } from './LinkedList';
 
-  sort(): void {
-    const { length } = this.collection;
+const numbersCollection = new NumbersCollection([1 / 3, 33, 50000, 10]);
+const numSorter = new Sorter(numbersCollection);
+numSorter.sort();
+console.log(numSorter.collection);
 
-    for (let i = 0; i < length; i++) {
-      for (let j = 0; j < length - i - 1; j++) {
-        if (this.collection[j] > this.collection[j + 1]) {
-          if (this.collection instanceof Array) {
-            const biggerNumber = this.collection[j];
-            this.collection[j] = this.collection[j + 1];
-            this.collection[j + 1] = biggerNumber;
-          }
-        }
-      }
-    }
-  }
-}
+const charactersCollection = new CharacterCollection('abcdefghijklmnopqrstuvwxyz');
+const charSorter = new Sorter(charactersCollection);
+charSorter.sort();
+console.log(charSorter.collection);
 
-const sorter = new Sorter([10, 3, -5, 0]);
-sorter.sort();
-console.log(sorter.collection);
+const linkedList = new LinkedList()
+linkedList.add(1)
+linkedList.add(5)
+linkedList.add(4)
+console.log(linkedList);
