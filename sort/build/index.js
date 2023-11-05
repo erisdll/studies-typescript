@@ -1,21 +1,19 @@
 "use strict";
-class Sorter {
-    constructor(collection) {
-        this.collection = collection;
-    }
-    sort() {
-        const { length } = this.collection;
-        for (let i = 0; i < length; i++) {
-            for (let j = 0; j < length - i - 1; j++) {
-                if (this.collection[j] > this.collection[j + 1]) {
-                    const biggerNumber = this.collection[j];
-                    this.collection[j] = this.collection[j + 1];
-                    this.collection[j + 1] = biggerNumber;
-                }
-            }
-        }
-    }
-}
-const sorter = new Sorter([10, 3, -5, 0]);
-sorter.sort();
-console.log(sorter.collection);
+Object.defineProperty(exports, "__esModule", { value: true });
+const sorter_1 = require("./sorter");
+const NumbersCollection_1 = require("./NumbersCollection");
+const CharacterCollection_1 = require("./CharacterCollection");
+const LinkedList_1 = require("./LinkedList");
+const numbersCollection = new NumbersCollection_1.NumbersCollection([1 / 3, 33, 50000, 10]);
+const numSorter = new sorter_1.Sorter(numbersCollection);
+numSorter.sort();
+console.log(numSorter.collection);
+const charactersCollection = new CharacterCollection_1.CharacterCollection('abcdefghijklmnopqrstuvwxyz');
+const charSorter = new sorter_1.Sorter(charactersCollection);
+charSorter.sort();
+console.log(charSorter.collection);
+const linkedList = new LinkedList_1.LinkedList();
+linkedList.add(1);
+linkedList.add(5);
+linkedList.add(4);
+console.log(linkedList);
